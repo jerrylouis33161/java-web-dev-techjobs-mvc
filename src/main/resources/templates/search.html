@@ -37,8 +37,17 @@
     <hr />
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
-
-
+<!--    <table th:replace="fragments :: jobsResults"></table>-->
+    <tr th:each="job : ${jobs}">
+        <td>
+            <label> ID: <span th:text="${job.id}"></span></label><br>
+            <label> Name: <span th:text="${job.name}"></span></label><br>
+            <label> Employer: <span th:text="${job.employer}"></span></label><br>
+            <label> Location: <span th:text="${job.location}"></span></label><br>
+            <label> Position Type: <span th:text="${job.positionType}"></span></label><br>
+            <label> Skills: <span th:text="${job.coreCompetency}"></span></label><br>
+        </td>
+    </tr>
 </div>
 
 </body>

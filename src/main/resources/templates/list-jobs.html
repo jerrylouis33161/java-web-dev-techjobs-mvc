@@ -14,29 +14,22 @@
     <head>
         <style>
         table, th, tr {
-  border: 1px solid black;
+  border: 1px solid blue;
 }
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 25%;
 }
-
+}
 
 </style>
     </head>
-    <table th:each="job : ${jobs}">
-           <tr>
-            <td>
-
-<!--                       <tr>-->
-<!--                           <th>ID: <span th:text="${job.id}"></span></th><br>-->
-<!--                           <th>Name: <span th:text="${job.name}"></span></th><br>-->
-<!--                           <th>Employer: <span th:text="${job.employer}"></span></th><br>-->
-<!--                           <th>Location: <span th:text="${job.location}"></span></th><br>-->
-<!--                           <th>Position Type: <span th:text="${job.positionType}"></span></th><br>-->
-<!--                           <th>Skills: <span th:text="${job.coreCompetency}"></span></th><br>-->
-<!--                       </tr>-->
+    <div th:fragment="jobs">
+<!--    <table th:each="job : ${jobs}">-->
+    <table class="">
+           <tr th:each="job : ${jobs}">
+               <td>
                    <label> ID: <span th:text="${job.id}"></span></label><br>
                    <label> Name: <span th:text="${job.name}"></span></label><br>
                    <label> Employer: <span th:text="${job.employer}"></span></label><br>
@@ -46,6 +39,7 @@ table {
                </td>
            </tr>
 </table>
+    </div>
 </div>
 
 </body>
